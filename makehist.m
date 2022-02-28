@@ -1,9 +1,5 @@
-% Input: name.wav.
-% Output: histogram of the voice recording.
-%[voice, FS] = audioread(name.wav’); % read the original/fake voice recording.
-%nbins = 65536; % number of bins of the histogram.
-%h = histogram(voice, nbins); % plot the histogram.
-set(0,'DefaultFigureVisible','off')
+parpool;
+set(0,'DefaultFigureVisible','off');
 
 myDir = 'D:\Data\Testing_data'; %gets directory
 myFiles = dir(fullfile(myDir,'*.wav')); %gets all wav files in struct
